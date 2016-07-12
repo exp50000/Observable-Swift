@@ -46,6 +46,10 @@
 		65D5366B195F711E003B5DA5 /* OwningEventReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D53669195F711E003B5DA5 /* OwningEventReference.swift */; };
 		65E6A4341958EB8000FBCFA7 /* ObservableProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E6A4331958EB8000FBCFA7 /* ObservableProxy.swift */; };
 		65E6A4351958EB8000FBCFA7 /* ObservableProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E6A4331958EB8000FBCFA7 /* ObservableProxy.swift */; };
+		D6893C301D35AD920083405A /* ObservableHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6893C2E1D35AD920083405A /* ObservableHelpers.swift */; };
+		D6893C311D35AD920083405A /* ObservableTransformProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6893C2F1D35AD920083405A /* ObservableTransformProxy.swift */; };
+		D6893C321D35B2A20083405A /* ObservableHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6893C2E1D35AD920083405A /* ObservableHelpers.swift */; };
+		D6893C331D35B2A20083405A /* ObservableTransformProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6893C2F1D35AD920083405A /* ObservableTransformProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +159,8 @@
 		65D53669195F711E003B5DA5 /* OwningEventReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwningEventReference.swift; sourceTree = "<group>"; };
 		65E6A4331958EB8000FBCFA7 /* ObservableProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableProxy.swift; sourceTree = "<group>"; };
 		65E7DC711957919100CFB99C /* ObservableChainingProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableChainingProxy.swift; sourceTree = "<group>"; };
+		D6893C2E1D35AD920083405A /* ObservableHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableHelpers.swift; sourceTree = "<group>"; };
+		D6893C2F1D35AD920083405A /* ObservableTransformProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableTransformProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +219,8 @@
 		65263A9F1954BC5000B39269 /* Observable */ = {
 			isa = PBXGroup;
 			children = (
+				D6893C2E1D35AD920083405A /* ObservableHelpers.swift */,
+				D6893C2F1D35AD920083405A /* ObservableTransformProxy.swift */,
 				65263AC11954EBD600B39269 /* Protocols.swift */,
 				65263AC51955D7AE00B39269 /* Event.swift */,
 				65A18B941958C180008E0B44 /* EventReference.swift */,
@@ -467,10 +475,12 @@
 				65263AC21954EBD600B39269 /* Protocols.swift in Sources */,
 				65263AC81955D83200B39269 /* EventSubscription.swift in Sources */,
 				65A18B971958D21A008E0B44 /* ObservableChainingProxy.swift in Sources */,
+				D6893C301D35AD920083405A /* ObservableHelpers.swift in Sources */,
 				65A18B951958C180008E0B44 /* EventReference.swift in Sources */,
 				65263AC01954BD7400B39269 /* TupleObservable.swift in Sources */,
 				65263ABA1954BC9F00B39269 /* Observable.swift in Sources */,
 				65263AC41955004A00B39269 /* ObservableReference.swift in Sources */,
+				D6893C311D35AD920083405A /* ObservableTransformProxy.swift in Sources */,
 				65263AC61955D7AF00B39269 /* Event.swift in Sources */,
 				65D5366A195F711E003B5DA5 /* OwningEventReference.swift in Sources */,
 				65E6A4341958EB8000FBCFA7 /* ObservableProxy.swift in Sources */,
@@ -492,10 +502,12 @@
 				6592C3281957545C00BA8CB7 /* Observable.swift in Sources */,
 				6592C3261957545C00BA8CB7 /* Event.swift in Sources */,
 				65A18B981958D21B008E0B44 /* ObservableChainingProxy.swift in Sources */,
+				D6893C321D35B2A20083405A /* ObservableHelpers.swift in Sources */,
 				65A18B961958C180008E0B44 /* EventReference.swift in Sources */,
 				6592C3271957545C00BA8CB7 /* EventSubscription.swift in Sources */,
 				6592C32A1957545C00BA8CB7 /* TupleObservable.swift in Sources */,
 				6592C3251957545C00BA8CB7 /* Protocols.swift in Sources */,
+				D6893C331D35B2A20083405A /* ObservableTransformProxy.swift in Sources */,
 				6592C3291957545C00BA8CB7 /* ObservableReference.swift in Sources */,
 				65D5366B195F711E003B5DA5 /* OwningEventReference.swift in Sources */,
 				65E6A4351958EB8000FBCFA7 /* ObservableProxy.swift in Sources */,
