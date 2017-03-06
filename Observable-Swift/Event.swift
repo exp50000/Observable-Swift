@@ -61,19 +61,23 @@ public struct Event<T>: UnownableEvent {
     
 }
 
+@discardableResult
 public func += <T: UnownableEvent> (event: inout T, handler: @escaping (T.ValueType) -> ()) -> EventSubscription<T.ValueType> {
     return event.add(handler)
 }
 
+@discardableResult
 public func += <T: OwnableEvent> (event: T, handler: @escaping (T.ValueType) -> ()) -> EventSubscription<T.ValueType> {
     var event = event
     return event.add(handler)
 }
 
+@discardableResult
 public  func -= <T: UnownableEvent> (event: inout T, subscription: EventSubscription<T.ValueType>) {
     return event.remove(subscription)
 }
 
+@discardableResult
 public func -= <T: OwnableEvent> (event: T, subscription: EventSubscription<T.ValueType>) {
     var event = event
     return event.remove(subscription)

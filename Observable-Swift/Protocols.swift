@@ -79,46 +79,55 @@ infix operator <-
 postfix operator ^
 
 // observable ^= value
+@discardableResult
 public func ^= <T : WritableObservable> (x: inout T, y: T.ValueType) {
     x.value = y
 }
 
 // observable += { valuechange in ... }
+@discardableResult
 public func += <T : AnyObservable> (x: inout T, y: @escaping (ValueChange<T.ValueType>) -> ()) -> EventSubscription<ValueChange<T.ValueType>> {
     return x.afterChange += y
 }
 
 // observable += { (old, new) in ... }
+@discardableResult
 public func += <T : AnyObservable> (x: inout T, y: @escaping (T.ValueType, T.ValueType) -> ()) -> EventSubscription<ValueChange<T.ValueType>> {
     return x.afterChange += y
 }
 
 // observable += { new in ... }
+@discardableResult
 public func += <T : AnyObservable> (x: inout T, y: @escaping (T.ValueType) -> ()) -> EventSubscription<ValueChange<T.ValueType>> {
     return x.afterChange += y
 }
 
 // observable -= subscription
+@discardableResult
 public func -= <T : AnyObservable> (x: inout T, s: EventSubscription<ValueChange<T.ValueType>>) {
     x.afterChange.remove(s)
 }
 
 // event += { (old, new) in ... }
+@discardableResult
 public func += <T> (event: EventReference<ValueChange<T>>, handler: @escaping (T, T) -> ()) -> EventSubscription<ValueChange<T>> {
     return event.add({ handler($0.oldValue, $0.newValue) })
 }
 
 // event += { new in ... }
+@discardableResult
 public func += <T> (event: EventReference<ValueChange<T>>, handler: @escaping (T) -> ()) -> EventSubscription<ValueChange<T>> {
     return event.add({ handler($0.newValue) })
 }
 
 // for observable values on variables
+@discardableResult
 public func <- <T : WritableObservable & UnownableObservable> (x: inout T, y: T.ValueType) {
     x.value = y
 }
 
 // for observable references on variables or constants
+@discardableResult
 public func <- <T : WritableObservable & OwnableObservable> (x: T, y: T.ValueType) {
     var x = x
     x.value = y
